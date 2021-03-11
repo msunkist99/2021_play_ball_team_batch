@@ -1,0 +1,25 @@
+java -jar build/libs/play_ball_team_batch-0.0.1-SNAPSHOT.jar org.launchcode.play_ball_team_batch.BatchConfiguration job1
+
+build.gradle
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-batch'
+	runtimeOnly 'mysql:mysql-connector-java'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.batch:spring-batch-test'
+	compile('org.springframework.boot:spring-boot-starter-batch')
+	compile('org.springframework.boot:spring-boot-starter-jdbc')
+}
+
+
+
+
+ERROR org.springframework.batch.core.launch.support.CommandLineJobRunner - Job Terminated in error: Error creating bean with name 'jobCompletionNotificationListener' defined in URL [jar:file:/C:/Users/msunk/Documents/CoderGirlJava202011/play_ball/play_ball_team_batch/build/libs/play_ball_team_batch-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/org/launchcode/play_ball_team_batch/listeners/JobCompletionNotificationListener.class]: 
+Unsatisfied dependency expressed through constructor parameter 0; 
+nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: 
+No qualifying bean of type 'org.springframework.jdbc.core.JdbcTemplate' available: 
+expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'jobCompletionNotificationListener' defined in URL [jar:file:/C:/Users/msunk/Documents/CoderGirlJava202011/play_ball/play_ball_team_batch/build/libs/play_ball_team_batch-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/org/launchcode/play_ball_team_batch/listeners/JobCompletionNotificationListener.class]: 
+Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: 
+No qualifying bean of type 'org.springframework.jdbc.core.JdbcTemplate' available: 
+expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
